@@ -1,0 +1,79 @@
+{
+	"cinema": [
+		{
+			"cinemaName": "Слово пацана. Кровь на асфальт",
+			"cinemaAuthor": "Жора Крыжовников",
+			"cinemaImage": "https://static.hdrezka.ac/i/2023/11/11/fb4b80eedd1c7pm22o29m.jpg",
+			"cinemaYear": "2023",
+			"cinemaGenre": "Триллер",
+			"id": 1
+		},
+		{
+			"cinemaName": "Killers of the Flower Moon",
+			"cinemaAuthor": "Мартин Скорсезе",
+			"cinemaImage": "https://static.hdrezka.ac/i/2023/8/30/jb51831e00110ry17x15d.jpg",
+			"cinemaYear": "2023",
+			"cinemaGenre": "Вестерны",
+			"id": 2
+		},
+		{
+			"cinemaName": "The Killer",
+			"cinemaAuthor": "Дэвид Финчер",
+			"cinemaImage": "https://static.hdrezka.ac/i/2023/10/28/qc9cacb458008vi55c70k.jpg",
+			"cinemaYear": "2023",
+			"cinemaGenre": "Триллеры",
+			"id": 3
+		},
+		{
+			"cinemaName": "Телохранитель на фрилансе",
+			"cinemaAuthor": "Пьер Морель",
+			"cinemaImage": "https://static.hdrezka.ac/i/2023/8/30/s564bd2deaa20lz27h81x.jpg",
+			"cinemaYear": "2023",
+			"cinemaGenre": "Комедии",
+			"id": 4
+		},
+		{
+			"cinemaName": "Миссия невыполнима: Смертельная расплата",
+			"cinemaAuthor": "Кристофер МакКуорри",
+			"cinemaImage": "https://static.hdrezka.ac/i/2023/5/27/o5a09a21453bfrz83q96g.jpg",
+			"cinemaYear": "2023",
+			"cinemaGenre": "Боевики",
+			"id": 5
+		},
+		{
+			"cinemaName": "Гран Туризмо",
+			"cinemaAuthor": "Нил Бломкамп",
+			"cinemaImage": "https://static.hdrezka.ac/i/2023/8/3/p07af4bdc5e4cgd76n70n.jpg",
+			"cinemaYear": "2023",
+			"cinemaGenre": "Спортивные",
+			"id": 6
+		}
+	],
+	"favorite": [
+		{
+			"movieInfo": {
+				"title": "Tick... Boom!"
+			},
+			"id": 4
+		},
+		{
+			"movieInfo": {
+				"title": "Return to Space"
+			},
+			"id": 6
+		},
+		{
+			"movieInfo": {
+				"title": "Spy x Family"
+			},
+			"id": 7
+		},
+		{
+			"movieInfo": {
+				"title": "Return to Space"
+			},
+			"id": 8
+		}
+	],
+	"cards": []
+}

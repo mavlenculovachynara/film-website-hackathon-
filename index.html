@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="icon" href="./icon/free-icon-camera-918245.png" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<title>MyCinema</title>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+	<body>
+		<!--! Navbar START -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="">HDrezka</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Главная</a>
+						</li>
+						<li
+							class="nav-link"
+							id="navbarDropdown"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Каталог
+						</li>
+					</ul>
+					<div class="d-flex">
+						<input
+							class="form-control me-2"
+							id="inpSearch"
+							type="search"
+							placeholder="Поиск..."
+							aria-label="Search"
+						/>
+						<button
+							class="btn btn-outline-success text-light"
+							type="button"
+							id="btnSearch"
+						>
+							Поиск
+						</button>
+						<div class="btn-group">
+							<button
+								class="btn btn-outline-success text-light"
+								type="button"
+								id="btnLogin"
+							>
+								Аккаунт
+							</button>
+							<button
+								class="btn btn-outline-success text-light dropdown-toggle"
+								type="button"
+								id="dropdownMenuButton"
+								data-bs-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<i class="bi bi-person"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<li>
+									<a class="dropdown-item" href="#"
+										><button id="favoriteBtn" class="btn btn-dark" >
+											Избранное
+										</button></a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--! Navbar FINISH -->
+
+		<!--! Header START -->
+		<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+						<a
+							href="#"
+							class="nav-link dropdown-toggle"
+							id="navbarDropdown"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+							>Фильмы</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="#">Фантастика</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Боевики</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Комедии</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Приключения</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Фэнтези</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Спортивные</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Триллеры</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Драмы</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+						<a
+							href="#"
+							class="nav-link dropdown-toggle"
+							id="navbarDropdown"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+							>Сериалы</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="#">Фантастика</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Боевики</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Комедии</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Приключения</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Фэнтези</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Спортивные</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Триллеры</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Драмы</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+						<a
+							href="#"
+							class="nav-link dropdown-toggle"
+							id="navbarDropdown"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+							>Мультфильмы</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="#">Фантастика</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Боевики</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Комедии</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Приключения</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Фэнтези</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Спортивные</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Триллеры</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+						<a
+							href="#"
+							class="nav-link dropdown-toggle"
+							id="navbarDropdown"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+							>Аниме</a
+						>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="#">Фантастика</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Боевики</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Комедии</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Повседневность</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Фэнтези</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Спортивные</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Ужасы</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Романтика</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Новинки</a>
+					</li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Анонсы</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!--! Header FINISH -->
+
+		<!--! Add Panel START -->
+		<div class="accordion accordion-flush" id="accordionFlushExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="flush-headingOne">
+					<button
+						class="accordion-button collapsed"
+						type="button"
+						id="btnOpenForm"
+						data-bs-toggle="collapse"
+						data-bs-target="#flush-collapseOne"
+						aria-expanded="false"
+						aria-controls="flush-collapseOne"
+					>
+						Добавить фильм:
+					</button>
+				</h2>
+				<div
+					id="flush-collapseOne"
+					class="accordion-collapse collapse"
+					aria-labelledby="flush-headingOne"
+					data-bs-parent="#accordionFlushExample"
+				>
+					<div class="accordion-body">
+						<input
+							type="text"
+							class="form-control me-2"
+							id="inpName"
+							placeholder="Название фильма"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="inpAuthor"
+							placeholder="Режиссер"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="inpImage"
+							placeholder="Изображение"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="inpYear"
+							placeholder="Год"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="inpGenre"
+							placeholder="Жанр"
+							aria-label="Search"
+						/>
+						<button
+							type="submit"
+							id="btnAdd"
+							class="btn btn-outline-success text-success"
+						>
+							Добавить
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--! Add Panel FINISH -->
+
+		<!--! Section books START -->
+		<section
+			id="sectionCinema"
+			class="container mt-5 mx-auto d-flex flex-wrap align-content-center justify-content-center"
+		></section>
+		<!--! Section books FINISH -->
+
+		<!--! EDIT MODAL START -->
+		<div
+			class="modal fade"
+			id="exampleModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="modal"
+						></button>
+					</div>
+					<div class="modal-body">
+						<input
+							type="text"
+							class="form-control me-2"
+							id="editInpName"
+							placeholder="Название фильма"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="editInpAuthor"
+							placeholder="Режиссер"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="editInpImage"
+							placeholder="Изображение"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="editInpYear"
+							placeholder="Год"
+							aria-label="Search"
+						/>
+						<input
+							type="text"
+							class="form-control me-2"
+							id="editInpGenre"
+							placeholder="Жанр"
+							aria-label="Search"
+						/>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-primary btnSave"
+							id="editBtnSave"
+							data-bs-toggle="modal"
+							data-bs-target="#exampleModal"
+						>
+							Сохранить
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--! EDIT MODAL FINISH -->
+
+		<!--! Pagination START -->
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-center">
+				<li class="page-item">
+					<a id="prevBtn" class="page-link" href="#" aria-label="Previous"
+						>❮
+					</a>
+				</li>
+				<li class="page-item">
+					<a id="nextBtn" class="page-link" href="#">❯</a>
+				</li>
+			</ul>
+		</nav>
+		<!--! Pagination FINISH -->
+
+		<!--! Main START -->
+		<!-- Последние поступления начало-->
+		<section id="main" class="container mt-5 mx-auto">
+			<h2 class="mb-4">Последние поступления</h2>
+			<div class="card-group">
+				<!-- Карточка 1 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2022/4/7/da7d4cd03269ebd15x51n.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Return to Space</h5>
+						<p class="card-text">Документальные</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 2 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2022/1/10/i1cf85d504fa3et97g11i.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Tick... Boom!</h5>
+						<p class="card-text">Мюзиклы</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 3 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2022/9/7/o6657753aa36fyi59o71w.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Эрих М. Ремарк</h5>
+						<p class="card-text">Военные</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 4 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2021/1/24/s8e539fc975bfpn48e59g.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Gaga</h5>
+						<p class="card-text">Документальныe</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 5 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2022/12/18/e00ae28035686ch79r39y.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Ariana Grande</h5>
+						<p class="card-text">Музыкальные</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Последние поступления конец-->
+
+		<!-- Популярное начало-->
+		<section id="popular" class="container mt-5 mx-auto">
+			<h2 class="mb-4">Популярное</h2>
+			<div class="card-group">
+				<!-- Карточка 1 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2021/2/22/sb994919fca55ki54t64b.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Anne with an E</h5>
+						<p class="card-text">Драмы</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 2 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/6/22/df69eb576bcc7gg33i24u.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Black Mirror</h5>
+						<p class="card-text">Фантастика</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 3 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2022/2/18/ib313d3d4801bhf64v47e.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Stranger Things</h5>
+						<p class="card-text">Фэнтези</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 4 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2021/1/16/d5bb9dc0ebfc4bn31u85g.jpeg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">House of Cards</h5>
+						<p class="card-text">Драмы</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 5 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2021/2/11/aeefadd724f37dc39k79p.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">La casa de papel</h5>
+						<p class="card-text">Криминал</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Популярное конец-->
+
+		<!--Ожидание начало-->
+		<section id="anticipated" class="container mt-5 mx-auto">
+			<h2 class="mb-4">Ожидаемое</h2>
+			<div class="card-group">
+				<!-- Карточка 1 -->
+				<div class="card">
+					<img
+					src="https://static.hdrezka.ac/i/2023/7/29/pfcbcaae7c9c5la83y85g.jpg"
+					class=card-img-top" alt="Placeholder Image" />
+					<div class="card-body">
+						<h5 class="card-title">The Marvels. Capitan Marvel</h5>
+						<p class="card-text">Фэнтези</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 2 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/9/3/td5ab3076a87evm55a75j.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">What Happens Later</h5>
+						<p class="card-text">Мелодрамы</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 3 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/5/3/z840c53e354e8sz70s98e.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Longma jingshen</h5>
+						<p class="card-text">Комедии</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 4 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/7/26/d144367f02292ng52o27s.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Stephen Curry: Underrated</h5>
+						<p class="card-text">Документальные</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 5 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/7/5/mfff6af54a1e6pw53a53q.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Sound of Freedom</h5>
+						<p class="card-text">Триллеры</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Ожидание конец-->
+
+		<!-- Сейчас смотрят начало-->
+		<section id="nowWatching" class="container mt-5 mx-auto">
+			<h2 class="mb-4">Сейчас смотрят</h2>
+			<div class="card-group">
+				<!-- Карточка 1 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/9/29/qc46b7d6f984ekb17z53x.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Spy x Family. Сезон 2</h5>
+						<p class="card-text">Приключения</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 2 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/10/6/t1444f57d5372pf72o25m.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Goblin Slayer. Сезон 2</h5>
+						<p class="card-text">Фэнтези</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 3 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2023/10/6/f12ec9d864d1bmv25d48e.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Герой щита. Сезон 3
+						</h5>
+						<p class="card-text">Фэнтези</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 4 -->
+				<div class="card">
+					<img
+						src="https://img3.labirint.ru/rc/5cd93b43bfaf2e9b184cc5cddbfb4c69/363x561q80/books92/913075/cover.jpg?1691069119"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Магическая битва</h5>
+						<p class="card-text">ИМБА</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							data-movie-id="${item.id}"
+							type="button"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+				<!-- Карточка 5 -->
+				<div class="card">
+					<img
+						src="https://static.hdrezka.ac/i/2022/10/9/i2f64cf4caa06sm21v50q.jpg"
+						class="card-img-top"
+						alt="Placeholder Image"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">Blue Lock</h5>
+						<p class="card-text" id="cinema_list">Исаги Йоичи - Эгоиста</p>
+						<button class="btn btn-primary btnDetails">Подробнее</button>
+						<button
+							class="btn btn-success btnCheck"
+							type="button"
+							data-movie-id="${item.id}"
+						>
+							<i class="bi bi-check">✓</i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Сейчас смотрят конец-->
+		<!--! Main FINISH -->
+
+		<!--! Modal window START -->
+		<div
+			class="modal fade"
+			id="movieModal"
+			tabindex="-1"
+			aria-labelledby="movieModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="movieModalLabel">
+							Полная информация о фильме
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body" id="modalBody"></div>
+				</div>
+			</div>
+		</div>
+		<!--! Modal window FINISH -->
+		<!--! Модальное окно для отображения в Избранном  START-->
+		<div
+			class="modal fade"
+			id="favoriteModal"
+			tabindex="-1"
+			aria-labelledby="favoriteModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="favoriteModalLabel">Избранное</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<div id="favoriteModalContent"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--! Модальное окно для отображения в Избранном  FINISH-->
+
+		<!--! Footer START -->
+<footer class="bg-black text-white py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Контакты</h4>
+                <p><em>Телефон:</em> +7 (XXX) XXX-XX-XX</p>
+                <p><em>Email:</em> example@example.com</p>
+            </div>
+            <div class="col-md-3">
+                <h4>Социальные сети</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://vk.com/hdrezka" target="_blank" class="text-light">
+                            <em>VK Group</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/hdrezka" target="_blank" class="text-light">
+                            <em>Twitter</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.dota2.com/home" target="_blank" class="text-light">
+                            <em>Вдохновение</em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="rounded-circle overflow-hidden" style="width: 200px; height: 200px; margin: 0 auto;">
+                    <img src="https://img.buzzfeed.com/buzzfeed-static/static/2021-04/19/23/asset/6a59b4910fca/sub-buzz-21525-1618875847-8.png" alt="Фото" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4><em>Цитата <em>Великого человека</em></h4>
+                <p>
+                    <em>
+                        "Я всегда думаю о том, что могло бы случиться в любой ситуации,
+                        и как я мог бы подготовиться к этому."
+                    </em>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>&copy; 2023 Сайт фильмов (ну почти)</p>
+    </div>
+</footer>
+		<!--! Footer FINISH -->
+
+		<!-- JS Bootstrap -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
